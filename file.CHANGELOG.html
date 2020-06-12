@@ -59,14 +59,20 @@
 
       <div id="content"><div id='filecontents'><h1 id="changelog">Changelog</h1>
 
-<h2 id="unreleased"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/HEAD">Unreleased</a></h2>
+<h2 id="v7-0-0-beta20-2020-06-02"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta20">v7.0.0.beta20</a> (2020-06-02)</h2>
 
-<p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta19...HEAD">Full Changelog</a></p>
+<p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta19...v7.0.0.beta20">Full Changelog</a></p>
 
 <p><strong>Fixed bugs:</strong></p>
 
 <ul>
 <li>Reaper can&#39;t be registered again if sidekiq gets killed by SIGKILL <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/490">#490</a></li>
+</ul>
+
+<p><strong>Closed issues:</strong></p>
+
+<ul>
+<li>How do I turn this on for only one job class? <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/510">#510</a></li>
 </ul>
 
 <h2 id="v7-0-0-beta19-2020-05-21"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta19">v7.0.0.beta19</a> (2020-05-21)</h2>
@@ -99,12 +105,6 @@
 <li>Try GitHub actions <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/505">#505</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 </ul>
 
-<p><strong>Fixed bugs:</strong></p>
-
-<ul>
-<li>Deep stringify worker options to account for hash in on_conflict <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/506">#506</a> (<a href="https://github.com/jasonbekolay">jasonbekolay</a>)</li>
-</ul>
-
 <h2 id="v7-0-0-beta16-2020-05-19"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta16">v7.0.0.beta16</a> (2020-05-19)</h2>
 
 <p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v6.0.22...v7.0.0.beta16">Full Changelog</a></p>
@@ -112,6 +112,7 @@
 <p><strong>Fixed bugs:</strong></p>
 
 <ul>
+<li>Deep stringify worker options to account for hash in on_conflict <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/506">#506</a> (<a href="https://github.com/jasonbekolay">jasonbekolay</a>)</li>
 <li>Deprecate configuration options with <code>default\_</code> <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/504">#504</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 <li>Fix access to both server and client conflict <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/503">#503</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 </ul>
@@ -1608,6 +1609,7 @@
 <li>Clarify README about unique expiration <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/36">#36</a> (<a href="https://github.com/spacemunkay">spacemunkay</a>)</li>
 <li>Add option to make jobs unique on all queues <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/32">#32</a> (<a href="https://github.com/robinmessage">robinmessage</a>)</li>
 <li>Fix homepage in gemspec <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/29">#29</a> (<a href="https://github.com/tmaier">tmaier</a>)</li>
+<li>Compatibility with Sidekiq 2.12.1 Scheduled Jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/16">#16</a> (<a href="https://github.com/lsimoneau">lsimoneau</a>)</li>
 </ul>
 
 <h2 id="v2-7-0-2013-11-24"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v2.7.0">v2.7.0</a> (2013-11-24)</h2>
@@ -1630,7 +1632,6 @@
 <li>Make unlock/yield order configurable. <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/21">#21</a> (<a href="https://github.com/endofunky">endofunky</a>)</li>
 <li>Rely on Sidekiq&#39;s String#constantize extension instead of rolling our own <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/19">#19</a> (<a href="https://github.com/disbelief">disbelief</a>)</li>
 <li>Attempt to constantize String <code>worker\_class</code> arguments passed to client middleware <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/17">#17</a> (<a href="https://github.com/disbelief">disbelief</a>)</li>
-<li>Compatibility with Sidekiq 2.12.1 Scheduled Jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/16">#16</a> (<a href="https://github.com/lsimoneau">lsimoneau</a>)</li>
 <li>Allow worker to specify which arguments to include in uniquing hash <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/12">#12</a> (<a href="https://github.com/sax">sax</a>)</li>
 <li>Add support for unique when using Sidekiq&#39;s delay function <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/11">#11</a> (<a href="https://github.com/eduardosasso">eduardosasso</a>)</li>
 <li>Adding the unique prefix option <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/8">#8</a> (<a href="https://github.com/KensoDev">KensoDev</a>)</li>
@@ -1670,9 +1671,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Tue Jun  2 18:58:09 2020 by
+  Generated on Fri Jun 12 06:07:35 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.6.5).
+  0.9.25 (ruby-2.7.1).
 </div>
 
     </div>
