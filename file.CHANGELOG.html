@@ -59,6 +59,40 @@
 
       <div id="content"><div id='filecontents'><h1 id="changelog">Changelog</h1>
 
+<h2 id="unreleased"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/HEAD">Unreleased</a></h2>
+
+<p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta21...HEAD">Full Changelog</a></p>
+
+<p><strong>Fixed bugs:</strong></p>
+
+<ul>
+<li>Infinite loop in ruby reaper <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/515">#515</a></li>
+</ul>
+
+<h2 id="v7-0-0-beta21-2020-06-12"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta21">v7.0.0.beta21</a> (2020-06-12)</h2>
+
+<p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta20...v7.0.0.beta21">Full Changelog</a></p>
+
+<p><strong>Implemented enhancements:</strong></p>
+
+<ul>
+<li>Move gems to gemfile <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/513">#513</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
+<li>Move dev-gems from gemspec to gemfile <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/512">#512</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
+</ul>
+
+<p><strong>Fixed bugs:</strong></p>
+
+<ul>
+<li>Prevent indefinitely looping entries <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/516">#516</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
+<li>Expire reaper when not checking in <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/508">#508</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
+</ul>
+
+<p><strong>Closed issues:</strong></p>
+
+<ul>
+<li>Missing web interface <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/514">#514</a></li>
+</ul>
+
 <h2 id="v7-0-0-beta20-2020-06-02"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta20">v7.0.0.beta20</a> (2020-06-02)</h2>
 
 <p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta19...v7.0.0.beta20">Full Changelog</a></p>
@@ -79,21 +113,9 @@
 
 <p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta18...v7.0.0.beta19">Full Changelog</a></p>
 
-<p><strong>Fixed bugs:</strong></p>
-
-<ul>
-<li>Expire reaper when not checking in <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/508">#508</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
-</ul>
-
 <h2 id="v7-0-0-beta18-2020-05-21"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta18">v7.0.0.beta18</a> (2020-05-21)</h2>
 
 <p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v7.0.0.beta17...v7.0.0.beta18">Full Changelog</a></p>
-
-<p><strong>Fixed bugs:</strong></p>
-
-<ul>
-<li>Stringify on_conflict hash in Job prepare method <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/507">#507</a> (<a href="https://github.com/jasonbekolay">jasonbekolay</a>)</li>
-</ul>
 
 <h2 id="v7-0-0-beta17-2020-05-20"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta17">v7.0.0.beta17</a> (2020-05-20)</h2>
 
@@ -105,6 +127,12 @@
 <li>Try GitHub actions <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/505">#505</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 </ul>
 
+<p><strong>Fixed bugs:</strong></p>
+
+<ul>
+<li>Deep stringify worker options to account for hash in on_conflict <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/506">#506</a> (<a href="https://github.com/jasonbekolay">jasonbekolay</a>)</li>
+</ul>
+
 <h2 id="v7-0-0-beta16-2020-05-19"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta16">v7.0.0.beta16</a> (2020-05-19)</h2>
 
 <p><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/compare/v6.0.22...v7.0.0.beta16">Full Changelog</a></p>
@@ -112,7 +140,6 @@
 <p><strong>Fixed bugs:</strong></p>
 
 <ul>
-<li>Deep stringify worker options to account for hash in on_conflict <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/506">#506</a> (<a href="https://github.com/jasonbekolay">jasonbekolay</a>)</li>
 <li>Deprecate configuration options with <code>default\_</code> <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/504">#504</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 <li>Fix access to both server and client conflict <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/503">#503</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 </ul>
@@ -151,6 +178,7 @@
 <li>Brpoplpush::RedisScript::LuaError: WRONGTYPE Operation against a key holding the wrong kind of value <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/491">#491</a></li>
 <li>Lua script bug <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/489">#489</a></li>
 <li>Reaper will delete locks for running jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/488">#488</a></li>
+<li>Stringify on_conflict hash in Job prepare method <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/507">#507</a> (<a href="https://github.com/jasonbekolay">jasonbekolay</a>)</li>
 <li>Fix access to hash members <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/496">#496</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 <li>Fix cursor assignment <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/494">#494</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 <li>Prevent reaping of active jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/493">#493</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
@@ -254,7 +282,6 @@
 
 <ul>
 <li>README: Use SVG badges ✨ <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/470">#470</a> (<a href="https://github.com/olleolleolle">olleolleolle</a>)</li>
-<li>remove deprecated/broken OptionsWithFallback#unique_type <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/435">#435</a> (<a href="https://github.com/zvkemp">zvkemp</a>)</li>
 </ul>
 
 <h2 id="v6-0-19-2020-03-21"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v6.0.19">v6.0.19</a> (2020-03-21)</h2>
@@ -439,6 +466,7 @@
 
 <ul>
 <li>Fix typo and some formatting issues in README <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/442">#442</a> (<a href="https://github.com/ajkerr">ajkerr</a>)</li>
+<li>remove deprecated/broken OptionsWithFallback#unique_type <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/435">#435</a> (<a href="https://github.com/zvkemp">zvkemp</a>)</li>
 </ul>
 
 <h2 id="v7-0-0-beta2-2019-10-08"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v7.0.0.beta2">v7.0.0.beta2</a> (2019-10-08)</h2>
@@ -931,7 +959,6 @@
 <li>Duplicate jobs getting created <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/257">#257</a></li>
 <li>Multiple non-unique jobs with until_executed? <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/255">#255</a></li>
 <li>:until_executing not unlocking when starting to run <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/245">#245</a></li>
-<li>Drop jobs hash <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/282">#282</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 </ul>
 
 <p><strong>Closed issues:</strong></p>
@@ -983,6 +1010,12 @@
 <li>Code smells <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/275">#275</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 <li>Reject while scheduling <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/273">#273</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 <li>Improve testing <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/272">#272</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
+</ul>
+
+<p><strong>Fixed bugs:</strong></p>
+
+<ul>
+<li>Drop jobs hash <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/282">#282</a> (<a href="https://github.com/mhenrixon">mhenrixon</a>)</li>
 </ul>
 
 <h2 id="v6-0-0-beta-2018-06-17"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v6.0.0.beta">v6.0.0.beta</a> (2018-06-17)</h2>
@@ -1474,7 +1507,6 @@
 <li>mock_redis and the mess <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/62">#62</a></li>
 <li>What is the exact behavior? <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/47">#47</a></li>
 <li>Throttling jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/39">#39</a></li>
-<li>undefined method `get_sidekiq_options&#39; for &quot;MyScheduledWorker&quot;:String  <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/27">#27</a></li>
 <li>Crash handling <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/14">#14</a></li>
 <li>Missing info from README <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/6">#6</a></li>
 </ul>
@@ -1595,6 +1627,7 @@
 <li>Short jobs are not unique for the given time window <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/33">#33</a></li>
 <li>Not all sidekiq:sidekiq_unique keys are removed from Redis <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/31">#31</a></li>
 <li>What does uniqueness mean in case of this gem? <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/30">#30</a></li>
+<li>undefined method `get_sidekiq_options&#39; for &quot;MyScheduledWorker&quot;:String  <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/27">#27</a></li>
 <li>Server middleware removes payload hash key before expiration <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/26">#26</a></li>
 <li>Lock remains when running with Sidekiq::Testing.inline! <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/23">#23</a></li>
 <li>What is the use case for the uniqueness window? <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/issues/22">#22</a></li>
@@ -1609,7 +1642,6 @@
 <li>Clarify README about unique expiration <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/36">#36</a> (<a href="https://github.com/spacemunkay">spacemunkay</a>)</li>
 <li>Add option to make jobs unique on all queues <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/32">#32</a> (<a href="https://github.com/robinmessage">robinmessage</a>)</li>
 <li>Fix homepage in gemspec <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/29">#29</a> (<a href="https://github.com/tmaier">tmaier</a>)</li>
-<li>Compatibility with Sidekiq 2.12.1 Scheduled Jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/16">#16</a> (<a href="https://github.com/lsimoneau">lsimoneau</a>)</li>
 </ul>
 
 <h2 id="v2-7-0-2013-11-24"><a href="https://github.com/mhenrixon/sidekiq-unique-jobs/tree/v2.7.0">v2.7.0</a> (2013-11-24)</h2>
@@ -1632,6 +1664,7 @@
 <li>Make unlock/yield order configurable. <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/21">#21</a> (<a href="https://github.com/endofunky">endofunky</a>)</li>
 <li>Rely on Sidekiq&#39;s String#constantize extension instead of rolling our own <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/19">#19</a> (<a href="https://github.com/disbelief">disbelief</a>)</li>
 <li>Attempt to constantize String <code>worker\_class</code> arguments passed to client middleware <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/17">#17</a> (<a href="https://github.com/disbelief">disbelief</a>)</li>
+<li>Compatibility with Sidekiq 2.12.1 Scheduled Jobs <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/16">#16</a> (<a href="https://github.com/lsimoneau">lsimoneau</a>)</li>
 <li>Allow worker to specify which arguments to include in uniquing hash <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/12">#12</a> (<a href="https://github.com/sax">sax</a>)</li>
 <li>Add support for unique when using Sidekiq&#39;s delay function <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/11">#11</a> (<a href="https://github.com/eduardosasso">eduardosasso</a>)</li>
 <li>Adding the unique prefix option <a href="https://github.com/mhenrixon/sidekiq-unique-jobs/pull/8">#8</a> (<a href="https://github.com/KensoDev">KensoDev</a>)</li>
@@ -1671,7 +1704,7 @@
 </div></div>
 
       <div id="footer">
-  Generated on Fri Jun 12 06:07:35 2020 by
+  Generated on Fri Jun 12 08:44:09 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.7.1).
 </div>
