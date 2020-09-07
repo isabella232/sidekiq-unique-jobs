@@ -10,7 +10,7 @@ class UniqueJobWithoutUniqueArgsParameter
                   retry: true,
                   lock_args: :unique_args
 
-  def perform(optional = true)
+  def perform(optional: true)
     # NO-OP
   end
 

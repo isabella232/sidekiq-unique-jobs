@@ -3,6 +3,7 @@ inherit_gem:
     - config/default.yml
 
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 2.5
   Include:
     - "examples/**/*.rb"
@@ -87,6 +88,9 @@ RSpec/InstanceVariable:
   Exclude:
     - spec/sidekiq_unique_jobs/middleware/client/call_spec.rb
     - spec/sidekiq_unique_jobs/middleware/server/call_spec.rb
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
 
 RSpec/MultipleExpectations:
   Enabled: false

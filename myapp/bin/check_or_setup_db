@@ -49,9 +49,12 @@ exit begin
        ActiveSupport::Dependencies.autoload_paths << File.join(DatabaseTasks.root, "app", "models", "concerns")
        ActiveSupport::Dependencies.autoload_paths << File.join(DatabaseTasks.root, "app", "models")
 
+       # rubocop:disable Lint/TopLevelReturnWithArgument
        return 2 unless DatabaseTasks.create_current
        return 3 unless DatabaseTasks.load_schema_current
        return 4 unless DatabaseTasks.load_seed
+
+       # rubocop:enable Lint/TopLevelReturnWithArgument
 
        0
      ensure
